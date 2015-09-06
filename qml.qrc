@@ -1,6 +1,17 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>MainForm.ui.qml</file>
+        <file>qml/DockIcon.qml</file>
+        <file>images/sideIconBack.png</file>
+        <file>images/homeIcon.png</file>
+        <file>images/musicIcon.png</file>
+        <file>images/mouseIcon.png</file>
+        <file>images/optionIcon.png</file>
+        <file>qml/HomePanel.qml</file>
+        <file>qml/Panel.qml</file>
+        <file>qml/ConfigPanel.qml</file>
+        <file>qml/SoundPanel.qml</file>
+        <file>qml/ControlPanel.qml</file>
+        <file>qml/MasterControl.qml</file>
     </qresource>
 </RCC>
