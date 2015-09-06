@@ -9,25 +9,18 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="110mm"
-   height="108mm"
-   viewBox="0 0 389.76358 382.67733"
-   id="svg2"
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 354.33071 354.33071"
+   id="svg3417"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="sideIconBack.svg">
+   inkscape:export-filename="/home/gaby/Programmation/C++/PIRemote/images/musicIcon.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"
+   sodipodi:docname="musicIcon.svg">
   <defs
-     id="defs4">
-    <filter
-       style="color-interpolation-filters:sRGB"
-       inkscape:label="Blur"
-       id="filter3367">
-      <feGaussianBlur
-         stdDeviation="5 5"
-         result="blur"
-         id="feGaussianBlur3369" />
-    </filter>
-  </defs>
+     id="defs3419" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -35,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.43778042"
-     inkscape:cx="-316.88467"
-     inkscape:cy="136.11802"
+     inkscape:zoom="1.3979265"
+     inkscape:cx="-138.11785"
+     inkscape:cy="116.8085"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -47,7 +40,7 @@
      inkscape:window-y="0"
      inkscape:window-maximized="1" />
   <metadata
-     id="metadata7">
+     id="metadata3422">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -62,28 +55,12 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-669.68448)">
-    <g
-       id="g3363"
-       transform="translate(2.9463252e-6,7.999999)">
-      <rect
-         rx="66.416275"
-         ry="124.81222"
-         y="670.66669"
-         x="0"
-         height="367.69553"
-         width="367.69553"
-         id="rect3344"
-         style="fill:#000000" />
-      <rect
-         rx="0"
-         ry="0"
-         y="670.66669"
-         x="0"
-         height="367.69553"
-         width="141.42136"
-         id="rect3344-2"
-         style="fill:#000000" />
-    </g>
+     transform="translate(0,-698.0315)">
+    <path
+       style="fill:#1a1a1a;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 233.11064,942.55145 c -30.26057,-29.25493 -60.18791,-17.57561 -64.89486,2.31618 -4.53547,30.31226 78.11032,26.65916 73.39628,0.56358 -9.83335,-37.23941 -18.29124,-98.07231 -20.02405,-124.47984 -0.50048,-7.6273 9.33985,-7.82074 13.45308,-8.17841 4.88811,-0.18512 29.80712,3.92779 42.56988,20.47369 l 3.90723,-24.04458 c -26.37163,-14.92166 -55.60838,-13.28238 -65.57731,-5.51588 -2.27621,2.78204 -8.10083,8.43986 -5.4316,16.53612 9.79558,29.71183 19.18786,86.96455 22.60135,122.32914 z"
+       id="path4227"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccsccccsc" />
   </g>
 </svg>

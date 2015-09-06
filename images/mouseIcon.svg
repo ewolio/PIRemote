@@ -9,25 +9,15 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="110mm"
-   height="108mm"
-   viewBox="0 0 389.76358 382.67733"
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 354.33071 354.33071"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="sideIconBack.svg">
+   sodipodi:docname="mouseIcon.svg">
   <defs
-     id="defs4">
-    <filter
-       style="color-interpolation-filters:sRGB"
-       inkscape:label="Blur"
-       id="filter3367">
-      <feGaussianBlur
-         stdDeviation="5 5"
-         result="blur"
-         id="feGaussianBlur3369" />
-    </filter>
-  </defs>
+     id="defs4" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -35,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.43778042"
-     inkscape:cx="-316.88467"
-     inkscape:cy="136.11802"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="174.83237"
+     inkscape:cy="86.648785"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -62,28 +52,12 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-669.68448)">
-    <g
-       id="g3363"
-       transform="translate(2.9463252e-6,7.999999)">
-      <rect
-         rx="66.416275"
-         ry="124.81222"
-         y="670.66669"
-         x="0"
-         height="367.69553"
-         width="367.69553"
-         id="rect3344"
-         style="fill:#000000" />
-      <rect
-         rx="0"
-         ry="0"
-         y="670.66669"
-         x="0"
-         height="367.69553"
-         width="141.42136"
-         id="rect3344-2"
-         style="fill:#000000" />
-    </g>
+     transform="translate(0,-698.0315)">
+    <path
+       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 96.469568,777.09565 c 42.402782,32.18208 81.686922,67.23659 129.299522,88.89342 -16.22198,9.68925 -23.22972,20.85935 -35.86041,31.81981 11.83465,14.86259 32.82995,43.43656 32.82995,43.43656 l -6.56599,7.57614 -32.82995,-46.97209 c -12.66444,5.44326 -25.59671,10.08299 -34.34519,27.27412 -6.58537,-62.2017 -30.43143,-105.00635 -52.527932,-152.02796 z"
+       id="path3336"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccc" />
   </g>
 </svg>
