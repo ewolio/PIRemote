@@ -6,6 +6,17 @@ import QtQuick.Controls 1.4
 Flow {
     id: root
 
+    property alias connectState: connectButton.state
+
+    Connections{
+        target: remoteInterface
+        onDisconnected: connectButton.state = "disconnected"
+        onConnected:{
+            connectButton.state = "connected"
+        }
+    }
+
+
     anchors.fill: parent
     anchors.margins: 20
     flow: Flow.TopToBottom
@@ -69,6 +80,67 @@ Flow {
         TextField{
             id: port
             Layout.preferredWidth: root.width*.6
+        }
+
+        Button{
+            id: connectButton
+            Layout.columnSpan: 2
+            Layout.fillWidth: true
+
+            BusyIndicator{
+                id: connectingIcon
+                anchors.fill: parent
+                opacity: 0
+            }
+
+            state: "disconnected"
+
+            onClicked: {
+                if(state=="disconnected"){
+                    state = "connecting";
+                    remoteInterface.connectRemote(serverAddress.text, port.text, nomRemote.text);
+                }else if(state=="connected")
+                    remoteInterface.disconnectRemote();
+            }
+
+
+
+            states:[
+                State{
+                    name: "disconnected"
+                    PropertyChanges{target: connectButton; text: "Connect"; enabled: true;}
+                    PropertyChanges{target: connectingIcon; opacity: 0;}
+                    PropertyChanges{target: nomRemote; enabled: true;}
+                    PropertyChanges{target: serverAddress; enabled: true;}
+                    PropertyChanges{target: port; enabled: true;}
+                },
+                State{
+                    name: "connecting"
+                    PropertyChanges{target: connectButton; text: ""; enabled: false;}
+                    PropertyChanges{target: connectingIcon; opacity: 1;}
+                    PropertyChanges{target: nomRemote; enabled: false;}
+                    PropertyChanges{target: serverAddress; enabled: false;}
+                    PropertyChanges{target: port; enabled: false;}
+                },
+                State{
+                    name: "connected"
+                    PropertyChanges{target: connectButton; text: "Disconnect"; enabled: true;}
+                    PropertyChanges{target: connectingIcon; opacity: 0;}
+                    PropertyChanges{target: nomRemote; enabled: false;}
+                    PropertyChanges{target: serverAddress; enabled: false;}
+                    PropertyChanges{target: port; enabled: false;}
+                }
+
+            ]
+            transitions:[
+                Transition {
+                    NumberAnimation {
+                        target: connectingIcon
+                        properties: "opacity"
+                        duration: 700
+                    }
+                }
+            ]
         }
     }
 }

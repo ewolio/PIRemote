@@ -3,6 +3,7 @@ import QtQuick.Controls 1.3
 import QtQuick.Window 2.2
 import QtGraphicalEffects 1.0
 import "./qml"
+
 Window {
     id: screen
     title: qsTr("PIRemote")
@@ -10,6 +11,19 @@ Window {
     height: 1080/2
     visible: true
     color: "#4a4a69"
+
+
+    Connections{
+        target: remoteInterface
+        onDisconnected:{
+            optionTab.action.checked=true;
+        }
+        onConnected:{
+            homeTab.action.checked=true;
+        }
+    }
+
+
 
     Rectangle{
         id: mainPanel
@@ -20,8 +34,6 @@ Window {
         y:0
 
         color: "#10101b"
-
-
 
 
 
@@ -42,37 +54,34 @@ Window {
         states: [
         State{
                name: "home"
-               PropertyChanges{target: homePanel; y:0}
-               PropertyChanges{target: soundPanel; y:0}
-               PropertyChanges{target: controlPanel; y:0}
+               PropertyChanges{target: homePanel; visible: true}
+               PropertyChanges{target: soundPanel; visible: false}
+               PropertyChanges{target: controlPanel;  visible: false}
             },
         State{
                name: "sound"
-               PropertyChanges{target: homePanel; y:-screen.height}
-               PropertyChanges{target: soundPanel; y:0}
-               PropertyChanges{target: controlPanel; y:0}
+               PropertyChanges{target: homePanel;  visible: false}
+               PropertyChanges{target: soundPanel;  visible: true}
+               PropertyChanges{target: controlPanel;  visible: false}
             },
         State{
                name: "control"
-               PropertyChanges{target: homePanel; y:-screen.height}
-               PropertyChanges{target: soundPanel; y:-screen.height}
-               PropertyChanges{target: controlPanel; y:0}
+               PropertyChanges{target: homePanel;  visible: false}
+               PropertyChanges{target: soundPanel; visible: false}
+               PropertyChanges{target: controlPanel; visible: true}
             },
         State{
                name: "config"
-               PropertyChanges{target: homePanel; y:-screen.height}
-               PropertyChanges{target: soundPanel; y:-screen.height}
-               PropertyChanges{target: controlPanel; y:-screen.height}
+               PropertyChanges{target: homePanel;  visible: false}
+               PropertyChanges{target: soundPanel;  visible: false}
+               PropertyChanges{target: controlPanel;  visible: false}
             }
         ]
 
-        onStateChanged: console.warn("State: " + state)
 
         transitions:[
             Transition{
-                NumberAnimation{target:homePanel; property: "y"; duration: 500;}
-                NumberAnimation{target:soundPanel; property: "y"; duration: 600;}
-                NumberAnimation{target:controlPanel; property: "y"; duration: 700;}
+
             }
 
         ]
@@ -81,7 +90,6 @@ Window {
     ExclusiveGroup{
         id: tabGroup
         onCurrentChanged:{
-            console.warn(current.objectName);
             mainPanel.state = current.objectName;
         }
     }
@@ -139,6 +147,7 @@ Window {
             spacing: 10
 
             DockIcon{
+                id:  homeTab
                 icon: "../images/homeIcon.png"
                 tabName: "home"
                 tabGroup: tabGroup

@@ -16,7 +16,7 @@ Panel  {
         spacing: 5
 
         MasterControl{
-
+            id: masterMix
         }
 
 
